@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="UTF-8">
+	<title>[ Calculator example 계산기 ]</title>
+</head>
+
+<body>
+    <table border="1">
+        <tr>
+            <td colspan="4">Calculator example 계산기</td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <input type="text" id='display'>
+            </td>
+            <td colspan="2">
+                <input type="text" id="re">
+            </td>
+            
+        </tr>
+        <tr>
+            <td colspan="1" onclick="a(1)">1</td>
+            <td colspan="1" onclick="a(2)">2</td>
+            <td colspan="1" onclick="a(3)">3</td>
+            <td colspan="1" onclick="a('+')"id="display">+</td>
+        </tr>
+        <tr>
+            <td colspan="1" onclick="a(4)">4</td>
+            <td colspan="1" onclick="a(5)">5</td>
+            <td colspan="1" onclick="a(6)">6</td>
+            <td colspan="1" onclick="a('-')" id="display">-</td>
+        </tr>
+        <tr>
+            <td colspan="1" onclick="a('7')">7</td>
+            <td colspan="1" onclick="a('8')">8</td>
+            <td colspan="1" onclick="a('9')">9</td>
+            <td colspan="1" onclick="re()">=</td>
+        </tr>
+        <tr>
+            <td colspan="4">Add /, X If you're new to JS, studying can help. </td>
+        </tr>
+        <tr>
+            <td colspan="4">
+                I used Google Translator. I am not familiar with English </td>
+        </tr>
+    </table>
+		
+	<script>
+        function a(int){
+            var display=document.getElementById('display');
+            display.value=display.value+int;
+        }
+        function re(){
+            var display=document.getElementById('display');
+            var result=eval(display.value)
+            document.getElementById('re').value=result
+        }
+	</script>
+	<style>
+        table{
+            border-color:gray;
+            border-collapse: collapse;
+        }
+        input{
+            border-color:black;
+        }
+        td{
+            text-align: center;
+        }
+    </style>
+</body>
+</html>
